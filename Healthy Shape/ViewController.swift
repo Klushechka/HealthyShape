@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
 
     @IBOutlet var getWeight: UITextField!
@@ -24,7 +24,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.getWeight.delegate = self
+        self.getHeight.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
+        func textFieldShouldReturn(_ getWeight: UITextField) -> Bool {
+            getWeight.resignFirstResponder()
+            return false
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,14 +44,21 @@ class ViewController: UIViewController {
             if userWeight != nil && userHeight != nil && userWeight != 0 && userHeight != 0 {
             myBMI = userWeight!/(userHeight!*userHeight!)
             } else {
-                print ("Please, enter valid numbers")
+                // create the alert
+                let alert = UIAlertController(title: "Need Info", message: "Please enter both weight and height values.", preferredStyle: UIAlertControllerStyle.alert)
+                
+                // add an action (button)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                
+                // show the alert
+                self.present(alert, animated: true, completion: nil)
             }
         }
         
         func getResume(myBMI: Float) {
             switch(myBMI) {
             case 0:
-                resume = ". Please check the values you've set on the previous screen."
+                resume = " . Please set weight and height values."
             case 1..<18.5:
                 resume = ". You are underweighted."
             case 18.5...24.9:

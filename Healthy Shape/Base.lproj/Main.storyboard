@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aIK-rg-Kst">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,49 +10,49 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Weight and Height-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Healthy_Shape" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Weight and Height" id="BYZ-38-t0r" customClass="ViewController" customModule="Healthy_Shape" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gee-Yb-mPG">
-                                <rect key="frame" x="162" y="244" width="91" height="39"/>
-                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="29"/>
-                                <color key="textColor" red="0.51429589580000001" green="1" blue="0.85149278549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gee-Yb-mPG">
+                                <rect key="frame" x="159" y="246" width="97" height="41"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="31"/>
+                                <color key="textColor" red="0.36295790319999999" green="0.75722555049999996" blue="0.38480662059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhz-xd-uzm">
-                                <rect key="frame" x="164" y="60" width="86" height="39"/>
-                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="29"/>
-                                <color key="textColor" red="0.51429589580000001" green="1" blue="0.85149278549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhz-xd-uzm">
+                                <rect key="frame" x="161.66666666666663" y="60" width="91.333333333333343" height="41"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="31"/>
+                                <color key="textColor" red="0.36295790319999999" green="0.75722555049999996" blue="0.38480662059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DO2-1Q-aLT">
-                                <rect key="frame" x="167" y="413" width="80" height="34"/>
-                                <color key="backgroundColor" red="0.25033941873839805" green="0.47696729274611394" blue="0.35454250211254873" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="167" y="417" width="80" height="34"/>
+                                <color key="backgroundColor" red="0.36295790320967197" green="0.75722555049999996" blue="0.38480662058640425" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="azY-72-H7O"/>
                                 </constraints>
                                 <color key="tintColor" red="0.39359960181911008" green="0.64267312864921455" blue="0.97749352331606221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Calculate">
-                                    <color key="titleColor" red="0.19218307021219916" green="0.93225793393782386" blue="0.75642956293846375" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.83173615658812605" green="0.93225793393782386" blue="0.35392843168998173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AMv-ef-eTV"/>
-                                    <segue destination="9IU-NE-ggK" kind="show" id="xTX-hD-BcO"/>
+                                    <segue destination="9IU-NE-ggK" kind="show" id="I88-er-aBF"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your height in cm" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CR9-l4-Ggf">
-                                <rect key="frame" x="122" y="139" width="171" height="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="122" y="141" width="171" height="30"/>
+                                <color key="textColor" red="0.30778392110000002" green="0.60457820600000001" blue="0.51909404010000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done"/>
                                 <connections>
@@ -60,16 +60,16 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your weight in kg" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Wfz-lA-dpf">
-                                <rect key="frame" x="123" y="323" width="169" height="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="123" y="327" width="169" height="30"/>
+                                <color key="textColor" red="0.30778392110000002" green="0.60457820600000001" blue="0.51909404010000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="weight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t6W-lh-wDy"/>
                                 </connections>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.11723373408510182" green="0.70699077072538863" blue="0.55025894681564802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CR9-l4-Ggf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="16n-H5-dp4"/>
                             <constraint firstItem="DO2-1Q-aLT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6QY-Si-O54"/>
@@ -83,72 +83,86 @@
                             <constraint firstItem="Fhz-xd-uzm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i88-Hr-Kdr"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Height &amp; Weight" id="Yli-1w-v3F"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="getHeight" destination="CR9-l4-Ggf" id="r6Q-Sg-sNo"/>
                         <outlet property="getWeight" destination="Wfz-lA-dpf" id="7FB-gQ-RXe"/>
+                        <segue destination="9IU-NE-ggK" kind="show" id="B5Z-wP-cxU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31.884057971014496" y="115.7608695652174"/>
+            <point key="canvasLocation" x="2165.217391304348" y="105.97826086956522"/>
         </scene>
-        <!--View Two-->
+        <!--Body Mass Index-->
         <scene sceneID="67j-lk-wYz">
             <objects>
-                <viewController id="9IU-NE-ggK" customClass="ViewTwo" customModule="Healthy_Shape" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Body Mass Index" id="9IU-NE-ggK" customClass="ViewTwo" customModule="Healthy_Shape" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YtX-XC-cDE"/>
                         <viewControllerLayoutGuide type="bottom" id="JwO-3M-bjk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ov5-92-JvN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Body Mass Index is: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exT-rV-cP9">
-                                <rect key="frame" x="25" y="300" width="364" height="200"/>
+                                <rect key="frame" x="25" y="459" width="364" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="yI3-IU-bG6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="18"/>
-                                <color key="textColor" red="0.51429589580000001" green="1" blue="0.85149278549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.36295790319999999" green="0.75722555049999996" blue="0.38480662059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BMI" translatesAutoresizingMaskIntoConstraints="NO" id="Bey-NF-lmV">
-                                <rect key="frame" x="122" y="80" width="170" height="170"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple_small" translatesAutoresizingMaskIntoConstraints="NO" id="Bey-NF-lmV">
+                                <rect key="frame" x="28" y="50" width="359" height="359"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LnO-R8-ZXZ">
-                                <rect key="frame" x="10" y="25" width="49" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Close">
-                                    <color key="titleColor" red="0.5090886805" green="1" blue="0.85860528049999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="ICv-PE-e10"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.1307010938" green="0.76082988880000002" blue="0.5877569198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="LnO-R8-ZXZ" firstAttribute="top" secondItem="YtX-XC-cDE" secondAttribute="bottom" constant="5" id="OZX-UF-HY8"/>
+                            <constraint firstItem="Bey-NF-lmV" firstAttribute="top" secondItem="YtX-XC-cDE" secondAttribute="bottom" constant="50" id="BLu-Ah-MQx"/>
                             <constraint firstItem="exT-rV-cP9" firstAttribute="leading" secondItem="Ov5-92-JvN" secondAttribute="leadingMargin" constant="5" id="OcD-gB-pSI"/>
                             <constraint firstItem="exT-rV-cP9" firstAttribute="centerX" secondItem="Ov5-92-JvN" secondAttribute="centerX" id="Owv-jp-b7k"/>
-                            <constraint firstItem="LnO-R8-ZXZ" firstAttribute="leading" secondItem="Ov5-92-JvN" secondAttribute="leading" constant="10" id="fcB-Fi-5N3"/>
                             <constraint firstItem="exT-rV-cP9" firstAttribute="top" secondItem="Bey-NF-lmV" secondAttribute="bottom" constant="50" id="g79-CX-iUB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="exT-rV-cP9" secondAttribute="trailing" constant="5" id="hGw-0b-vuF"/>
-                            <constraint firstItem="Bey-NF-lmV" firstAttribute="top" secondItem="LnO-R8-ZXZ" secondAttribute="bottom" constant="20" id="jUA-g1-Dye"/>
                             <constraint firstItem="Bey-NF-lmV" firstAttribute="centerX" secondItem="Ov5-92-JvN" secondAttribute="centerX" id="sTG-hl-Oev"/>
                         </constraints>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="Label" destination="exT-rV-cP9" id="yJn-Si-4pK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ua-nh-gca" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="736.23188405797111" y="114.94565217391305"/>
+            <point key="canvasLocation" x="2865" y="106"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nf4-1o-HZ2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aIK-rg-Kst" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Kh8-an-x0Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Sr4-fb-g0P"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PhR-k7-fXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1257.9710144927537" y="105.97826086956522"/>
         </scene>
     </scenes>
     <resources>
-        <image name="BMI" width="170" height="170"/>
+        <image name="apple_small" width="359" height="359"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="I88-er-aBF"/>
+    </inferredMetricsTieBreakers>
 </document>
