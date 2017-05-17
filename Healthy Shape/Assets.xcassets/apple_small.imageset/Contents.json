@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "apple_small.png",
+      "filename" : "apple_resized.png",
       "scale" : "1x"
     },
     {

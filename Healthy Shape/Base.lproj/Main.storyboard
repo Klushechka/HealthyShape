@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aIK-rg-Kst">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aIK-rg-Kst">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,32 +10,32 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Weight and Height-->
+        <!--Height & Weight-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Weight and Height" id="BYZ-38-t0r" customClass="ViewController" customModule="Healthy_Shape" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Height &amp; Weight" id="BYZ-38-t0r" customClass="ViewController" customModule="Healthy_Shape" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gee-Yb-mPG">
-                                <rect key="frame" x="159" y="246" width="97" height="41"/>
+                                <rect key="frame" x="159" y="171" width="97" height="41"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="31"/>
                                 <color key="textColor" red="0.36295790319999999" green="0.75722555049999996" blue="0.38480662059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhz-xd-uzm">
-                                <rect key="frame" x="161.66666666666663" y="60" width="91.333333333333343" height="41"/>
+                                <rect key="frame" x="161.66666666666663" y="40" width="91.333333333333343" height="41"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="31"/>
                                 <color key="textColor" red="0.36295790319999999" green="0.75722555049999996" blue="0.38480662059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DO2-1Q-aLT">
-                                <rect key="frame" x="167" y="417" width="80" height="34"/>
+                                <rect key="frame" x="167" y="342" width="80" height="34"/>
                                 <color key="backgroundColor" red="0.36295790320967197" green="0.75722555049999996" blue="0.38480662058640425" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="azY-72-H7O"/>
@@ -51,7 +51,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your height in cm" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CR9-l4-Ggf">
-                                <rect key="frame" x="122" y="141" width="171" height="30"/>
+                                <rect key="frame" x="122" y="101" width="171" height="30"/>
                                 <color key="textColor" red="0.30778392110000002" green="0.60457820600000001" blue="0.51909404010000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done"/>
@@ -60,7 +60,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your weight in kg" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Wfz-lA-dpf">
-                                <rect key="frame" x="123" y="327" width="169" height="30"/>
+                                <rect key="frame" x="123" y="232" width="169" height="30"/>
                                 <color key="textColor" red="0.30778392110000002" green="0.60457820600000001" blue="0.51909404010000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -68,27 +68,43 @@
                                     <action selector="weight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t6W-lh-wDy"/>
                                 </connections>
                             </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ees-Tt-eiR">
+                                <rect key="frame" x="147.66666666666669" y="288" width="120.00000000000006" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="29F-Oo-dQi"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Man"/>
+                                    <segment title="Woman"/>
+                                </segments>
+                                <color key="tintColor" red="0.36295790319999999" green="0.75722555049999996" blue="0.38480662059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="genderSwitchButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="heY-dL-wyc"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CR9-l4-Ggf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="16n-H5-dp4"/>
+                            <constraint firstItem="DO2-1Q-aLT" firstAttribute="top" secondItem="ees-Tt-eiR" secondAttribute="bottom" constant="26" id="5TW-NU-RrF"/>
                             <constraint firstItem="DO2-1Q-aLT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6QY-Si-O54"/>
-                            <constraint firstItem="Gee-Yb-mPG" firstAttribute="top" secondItem="Fhz-xd-uzm" secondAttribute="bottom" constant="145" id="CMF-Ub-gYn"/>
+                            <constraint firstItem="Gee-Yb-mPG" firstAttribute="top" secondItem="Fhz-xd-uzm" secondAttribute="bottom" constant="90" id="CMF-Ub-gYn"/>
                             <constraint firstItem="Wfz-lA-dpf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FBN-75-8AF"/>
-                            <constraint firstItem="Fhz-xd-uzm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="60" id="XAS-rq-iZg"/>
-                            <constraint firstItem="CR9-l4-Ggf" firstAttribute="top" secondItem="Fhz-xd-uzm" secondAttribute="bottom" constant="40" id="YPy-fK-v2s"/>
+                            <constraint firstItem="ees-Tt-eiR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pxb-UV-pT5"/>
+                            <constraint firstItem="ees-Tt-eiR" firstAttribute="top" secondItem="Wfz-lA-dpf" secondAttribute="bottom" constant="26" id="X8W-Cl-Jrw"/>
+                            <constraint firstItem="Fhz-xd-uzm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="40" id="XAS-rq-iZg"/>
+                            <constraint firstItem="CR9-l4-Ggf" firstAttribute="top" secondItem="Fhz-xd-uzm" secondAttribute="bottom" constant="20" id="YPy-fK-v2s"/>
                             <constraint firstItem="Gee-Yb-mPG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gho-8x-mac"/>
-                            <constraint firstItem="DO2-1Q-aLT" firstAttribute="top" secondItem="Gee-Yb-mPG" secondAttribute="bottom" constant="130" id="gzc-9b-NQc"/>
-                            <constraint firstItem="Wfz-lA-dpf" firstAttribute="top" secondItem="Gee-Yb-mPG" secondAttribute="bottom" constant="40" id="h4r-2e-zKs"/>
+                            <constraint firstItem="Wfz-lA-dpf" firstAttribute="top" secondItem="Gee-Yb-mPG" secondAttribute="bottom" constant="20" id="h4r-2e-zKs"/>
                             <constraint firstItem="Fhz-xd-uzm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i88-Hr-Kdr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Height &amp; Weight" id="Yli-1w-v3F"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationItem key="navigationItem" id="Yli-1w-v3F"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="genderSwitcher" destination="ees-Tt-eiR" id="GFO-EB-YBi"/>
                         <outlet property="getHeight" destination="CR9-l4-Ggf" id="r6Q-Sg-sNo"/>
                         <outlet property="getWeight" destination="Wfz-lA-dpf" id="7FB-gQ-RXe"/>
-                        <segue destination="9IU-NE-ggK" kind="show" id="B5Z-wP-cxU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -108,7 +124,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Body Mass Index is: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exT-rV-cP9">
-                                <rect key="frame" x="25" y="459" width="364" height="200"/>
+                                <rect key="frame" x="25" y="387" width="364" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="yI3-IU-bG6"/>
                                 </constraints>
@@ -117,7 +133,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple_small" translatesAutoresizingMaskIntoConstraints="NO" id="Bey-NF-lmV">
-                                <rect key="frame" x="28" y="50" width="359" height="359"/>
+                                <rect key="frame" x="64" y="50" width="287" height="287"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -160,9 +176,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="apple_small" width="359" height="359"/>
+        <image name="apple_small" width="287" height="287"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="I88-er-aBF"/>
-    </inferredMetricsTieBreakers>
 </document>
