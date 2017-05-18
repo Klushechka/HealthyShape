@@ -9,18 +9,18 @@
 import UIKit
 import Foundation
 
-
 class ViewController: UIViewController, UITextFieldDelegate {
-    
 
     @IBOutlet var getWeight: UITextField!
     @IBOutlet var getHeight: UITextField!
     @IBOutlet weak var genderSwitcher: UISegmentedControl!
     @IBOutlet weak var calculate: UIButton!
     
-    var myBMI: Float = 0.0
-    var resume: String = ""
+    var myBMI: Float = 0.0 // default BMI
+    var resume: String = "" // default resume for BMI values
     var gender: UInt8 = 2 // default value which is Man
+    let maxWeightValue: Float = 650.0
+    let maxHeightValue: Float = 300.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +38,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
             let characterSet = CharacterSet(charactersIn: string)
             return allowedCharacters.isSuperset(of: characterSet)
         }
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,7 +47,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if getWeight.text!.isEmpty || getHeight.text!.isEmpty {
-            // create the alert
+            // create the alert if one of fields or all the fields are empty
             let alert = UIAlertController(title: "Error", message: "Please fill all the fields.", preferredStyle: UIAlertControllerStyle.alert)
             
             // add an action (button)
@@ -64,7 +62,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
             // add an action (button)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             
-            // show the alert about 0 values
+            // show the alert about max Weight value
+            self.present(alert, animated: true, completion: nil)
+        } else if Float(getWeight.text!)! > maxWeightValue {
+            let alert = UIAlertController(title: "Error", message: "Please enter Weight less than 650.", preferredStyle: UIAlertControllerStyle.alert)
+            
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+        } else if Float(getHeight.text!)! > maxHeightValue {
+            // show alert about max Height value
+            let alert = UIAlertController(title: "Error", message: "Please enter Height less than 300.", preferredStyle: UIAlertControllerStyle.alert)
+            
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            
+            // show the alert
             self.present(alert, animated: true, completion: nil)
         } else {
         var DestViewController: ViewTwo = segue.destination as! ViewTwo
