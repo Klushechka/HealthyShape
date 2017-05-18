@@ -46,7 +46,7 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AMv-ef-eTV"/>
+                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6LF-Fb-U7h"/>
                                     <segue destination="9IU-NE-ggK" kind="show" id="I88-er-aBF"/>
                                 </connections>
                             </button>
@@ -63,7 +63,7 @@
                                 <rect key="frame" x="123" y="232" width="169" height="30"/>
                                 <color key="textColor" red="0.30778392110000002" green="0.60457820600000001" blue="0.51909404010000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="weight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t6W-lh-wDy"/>
                                 </connections>
@@ -102,6 +102,7 @@
                     <navigationItem key="navigationItem" id="Yli-1w-v3F"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="calculate" destination="DO2-1Q-aLT" id="rff-HY-L6B"/>
                         <outlet property="genderSwitcher" destination="ees-Tt-eiR" id="GFO-EB-YBi"/>
                         <outlet property="getHeight" destination="CR9-l4-Ggf" id="r6Q-Sg-sNo"/>
                         <outlet property="getWeight" destination="Wfz-lA-dpf" id="7FB-gQ-RXe"/>
@@ -124,7 +125,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Body Mass Index is: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exT-rV-cP9">
-                                <rect key="frame" x="25" y="387" width="364" height="200"/>
+                                <rect key="frame" x="25" y="423" width="364" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="yI3-IU-bG6"/>
                                 </constraints>
@@ -133,7 +134,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple_small" translatesAutoresizingMaskIntoConstraints="NO" id="Bey-NF-lmV">
-                                <rect key="frame" x="64" y="50" width="287" height="287"/>
+                                <rect key="frame" x="46" y="50" width="323" height="323"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -176,6 +177,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="apple_small" width="287" height="287"/>
+        <image name="apple_small" width="323" height="323"/>
     </resources>
 </document>
