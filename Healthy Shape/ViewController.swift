@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import CoreData
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
@@ -19,8 +20,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var myBMI: Float = 0.0 // default BMI
     var resume: String = "" // default resume for BMI values
     var gender: UInt8 = 2 // default value which is Man
-    let maxWeightValue: Float = 650.0
-    let maxHeightValue: Float = 300.0
+    let maxWeightValue: Float = 650.0 // approximate weight of the biggest man in the world
+    let maxHeightValue: Float = 300.0 // approximate heigh of the highest man in the world
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,8 +45,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //validating if numeric fields contain some symbols except numbers and separators
+        func validateNum(value: String) -> Bool {
+            let numRegEx = "([0-9]+[.,]*)+$"
+            let numericFieldTest = NSPredicate(format: "SELF MATCHES %@", numRegEx)
+            let match =  numericFieldTest.evaluate(with: value)
+            return match
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+       //MARK: Alerts
         if getWeight.text!.isEmpty || getHeight.text!.isEmpty {
             // create the alert if one of fields or all the fields are empty
             let alert = UIAlertController(title: "Error", message: "Please fill all the fields.", preferredStyle: UIAlertControllerStyle.alert)
@@ -55,7 +65,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             // show the alert
             self.present(alert, animated: true, completion: nil)
+            
         } else if getWeight.text! == "0" || getWeight.text! == "0.0" || getWeight.text! == "0,0" || getHeight.text! == "0" || getWeight.text! == "," || getWeight.text! == "." {
+            
             // create the alert about 0 values and separator
             let alert = UIAlertController(title: "Error", message: "Height or Weight cannot be equal to 0 or only separator. Please enter valid values.", preferredStyle: UIAlertControllerStyle.alert)
             
@@ -64,7 +76,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             // show the alert about max Weight value
             self.present(alert, animated: true, completion: nil)
-        } else if Float(getWeight.text!)! > maxWeightValue {
+            
+        } else if Float(getWeight.text!) != nil && Float (getWeight.text!)! > maxWeightValue {
             let alert = UIAlertController(title: "Error", message: "Please enter Weight less than 650.", preferredStyle: UIAlertControllerStyle.alert)
             
             // add an action (button)
@@ -72,7 +85,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             // show the alert
             self.present(alert, animated: true, completion: nil)
-        } else if Float(getHeight.text!)! > maxHeightValue {
+            
+        } else if Float(getHeight.text!) != nil && Float(getHeight.text!)! > maxHeightValue {
+            
             // show alert about max Height value
             let alert = UIAlertController(title: "Error", message: "Please enter Height less than 300.", preferredStyle: UIAlertControllerStyle.alert)
             
@@ -81,19 +96,29 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             // show the alert
             self.present(alert, animated: true, completion: nil)
+        } else if !validateNum(value: getWeight.text!) || !validateNum(value: getHeight.text!) {
+            
+            // show alert about letters in the fields
+            let alert = UIAlertController(title: "Error", message: "Height and Weight fields cannot include letters or special symbols.", preferredStyle: UIAlertControllerStyle.alert)
+            
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            
+            // show the alert about letters in the fields
+            self.present(alert, animated: true, completion: nil)
         } else {
         var DestViewController: ViewTwo = segue.destination as! ViewTwo
             
         // counting BodyMassIndex
         func countBMI(userWeight: Float?, userHeight: Float?){
-            if userWeight != nil && userHeight != nil && userWeight != 0 && userHeight != 0 {
+            if userWeight != nil && userHeight != nil && userWeight != 0 && userHeight != 0 && validateNum(value: getWeight.text!) == true && validateNum(value: getHeight.text!) == true {
                 
             myBMI = userWeight!/(userHeight! * userHeight!)
             } else if userWeight == 0 || userWeight == nil || userHeight == 0 || userHeight == nil {
                 print ("Some value is equal to nil")
             }
         }
-        
+        //MARK: Resume for BMI
             // creating resume text about BMI according to gender
         func getResume(myBMI: Float) {
             if gender == 2 { // When gender is Man
