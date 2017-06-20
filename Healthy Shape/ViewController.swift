@@ -8,12 +8,11 @@
 
 import UIKit
 import Foundation
-import CoreData
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet var getWeight: UITextField!
-    @IBOutlet var getHeight: UITextField!
+    @IBOutlet var weightInput: UITextField!
+    @IBOutlet var heightInput: UITextField!
     @IBOutlet weak var genderSwitcher: UISegmentedControl!
     @IBOutlet weak var calculate: UIButton!
     
@@ -25,12 +24,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.getWeight.delegate = self
-        self.getHeight.delegate = self
+        self.weightInput.delegate = self
+        self.heightInput.delegate = self
         
         //make the keyboard remember the values, set to the txt fields while coming back to the screen
         func textFieldShouldReturn(_ getWeight: UITextField) -> Bool {
-            getWeight.resignFirstResponder()
+            weightInput.resignFirstResponder()
             return false
         }
         
@@ -40,23 +39,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
             return allowedCharacters.isSuperset(of: characterSet)
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     //validating if numeric fields contain some symbols except numbers and separators
-        func validateNum(value: String) -> Bool {
-            let numRegEx = "([0-9]+[.,]*)+$"
-            let numericFieldTest = NSPredicate(format: "SELF MATCHES %@", numRegEx)
-            let match =  numericFieldTest.evaluate(with: value)
-            return match
+    func validateNum(value: String) -> Bool {
+        let numRegEx = "([0-9]+[.,]*)+$"
+        let numericFieldTest = NSPredicate(format: "SELF MATCHES %@", numRegEx)
+        let match =  numericFieldTest.evaluate(with: value)
+        return match
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       //MARK: Alerts
-        if getWeight.text!.isEmpty || getHeight.text!.isEmpty {
+        //MARK: Alerts
+        if weightInput.text!.isEmpty || heightInput.text!.isEmpty {
             // create the alert if one of fields or all the fields are empty
             let alert = UIAlertController(title: "Error", message: "Please fill all the fields.", preferredStyle: UIAlertControllerStyle.alert)
             
@@ -66,7 +65,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             // show the alert
             self.present(alert, animated: true, completion: nil)
             
-        } else if getWeight.text! == "0" || getWeight.text! == "0.0" || getWeight.text! == "0,0" || getHeight.text! == "0" || getWeight.text! == "," || getWeight.text! == "." {
+        } else if weightInput.text! == "0" || weightInput.text! == "0.0" || weightInput.text! == "0,0" || heightInput.text! == "0" || weightInput.text! == "," || weightInput.text! == "." {
             
             // create the alert about 0 values and separator
             let alert = UIAlertController(title: "Error", message: "Height or Weight cannot be equal to 0 or only separator. Please enter valid values.", preferredStyle: UIAlertControllerStyle.alert)
@@ -77,7 +76,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             // show the alert about max Weight value
             self.present(alert, animated: true, completion: nil)
             
-        } else if Float(getWeight.text!) != nil && Float (getWeight.text!)! > maxWeightValue {
+        } else if Float(weightInput.text!) != nil && Float (weightInput.text!)! > maxWeightValue {
             let alert = UIAlertController(title: "Error", message: "Please enter Weight less than 650.", preferredStyle: UIAlertControllerStyle.alert)
             
             // add an action (button)
@@ -86,7 +85,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             // show the alert
             self.present(alert, animated: true, completion: nil)
             
-        } else if Float(getHeight.text!) != nil && Float(getHeight.text!)! > maxHeightValue {
+        } else if Float(heightInput.text!) != nil && Float(heightInput.text!)! > maxHeightValue {
             
             // show alert about max Height value
             let alert = UIAlertController(title: "Error", message: "Please enter Height less than 300.", preferredStyle: UIAlertControllerStyle.alert)
@@ -96,7 +95,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             // show the alert
             self.present(alert, animated: true, completion: nil)
-        } else if !validateNum(value: getWeight.text!) || !validateNum(value: getHeight.text!) {
+        } else if !validateNum(value: weightInput.text!) || !validateNum(value: heightInput.text!) {
             
             // show alert about letters in the fields
             let alert = UIAlertController(title: "Error", message: "Height and Weight fields cannot include letters or special symbols.", preferredStyle: UIAlertControllerStyle.alert)
@@ -107,41 +106,41 @@ class ViewController: UIViewController, UITextFieldDelegate {
             // show the alert about letters in the fields
             self.present(alert, animated: true, completion: nil)
         } else {
-        var DestViewController: ViewTwo = segue.destination as! ViewTwo
+            var DestViewController: ViewTwo = segue.destination as! ViewTwo
             
-        // counting BodyMassIndex
-        func countBMI(userWeight: Float?, userHeight: Float?){
-            if userWeight != nil && userHeight != nil && userWeight != 0 && userHeight != 0 && validateNum(value: getWeight.text!) == true && validateNum(value: getHeight.text!) == true {
-                
-            myBMI = userWeight!/(userHeight! * userHeight!)
-            } else if userWeight == 0 || userWeight == nil || userHeight == 0 || userHeight == nil {
-                print ("Some value is equal to nil")
+            // counting BodyMassIndex
+            func countBMI(userWeight: Float?, userHeight: Float?){
+                if userWeight != nil && userHeight != nil && userWeight != 0 && userHeight != 0 && validateNum(value: weightInput.text!) == true && validateNum(value: heightInput.text!) == true {
+                    
+                    myBMI = userWeight!/(userHeight! * userHeight!)
+                } else if userWeight == 0 || userWeight == nil || userHeight == 0 || userHeight == nil {
+                    print ("Some value is equal to nil")
+                }
             }
-        }
-        //MARK: Resume for BMI
+            //MARK: Resume for BMI
             // creating resume text about BMI according to gender
-        func getResume(myBMI: Float) {
-            if gender == 2 { // When gender is Man
-                switch(myBMI) {
+            func getResume(myBMI: Float) {
+                if gender == 2 { // When gender is Man
+                    switch(myBMI) {
                     case 0..<1:
                         resume = " . It seems that your data is wrong. Please check the entered values."
                     case 1.0..<16.0:
-                            resume = ". You are dangerously underweighted."
+                        resume = ". You are dangerously underweighted."
                     case 16..<18.5:
-                            resume = ". You are underweighted."
+                        resume = ". You are underweighted."
                     case 18.5..<25.0:
-                            resume = ". You have a healthy weight."
+                        resume = ". You have a healthy weight."
                     case 25.0..<30:
-                            resume = ". You are overweighted."
+                        resume = ". You are overweighted."
                     case 30.0..<35.0:
-                            resume = ". You have an obese (Class I)."
+                        resume = ". You have an obese (Class I)."
                     case 35.0..<40.0:
-                            resume = ". You have an obese (Class II)."
+                        resume = ". You have an obese (Class II)."
                     case 40.0...9999999999999999999999999999:
-                            resume = ". You have a morbid obese (Class III)."
+                        resume = ". You have a morbid obese (Class III)."
                     default: break
-                }
-            } else { // When gender is Woman
+                    }
+                } else { // When gender is Woman
                     switch(myBMI) {
                     case 0..<1:
                         resume = " . It seems that your data is wrong. Please check the entered values."
@@ -160,24 +159,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     case 40.0...9999999999999999999999999999:
                         resume = ". You have a morbid obese (Class III)."
                     default: break
+                    }
                 }
             }
-        }
-
-        var weight: Float = 1.0
-        // validating the separator. If the separator is ",", it will be converted into "."to avoid crash
-        if (getWeight.text?.contains(","))! {
-            weight = Float(getWeight.text!.replacingOccurrences(of: ",", with: "."))!
-        } else {
-            weight = Float(getWeight.text!)!
-        }
-        
-        let height = (Float(getHeight.text!)!)/100
-        
-        countBMI(userWeight: weight, userHeight: height)
-        getResume(myBMI: myBMI)
-        
-        DestViewController.BodyMassText = "Your BodyMassIndex is " + String(format: "%.1f", myBMI) + resume
+            
+            var weight: Float = 1.0
+            // validating the separator. If the separator is ",", it will be converted into "."to avoid crash
+            if (weightInput.text?.contains(","))! {
+                weight = Float(weightInput.text!.replacingOccurrences(of: ",", with: "."))!
+            } else {
+                weight = Float(weightInput.text!)!
+            }
+            
+            let height = (Float(heightInput.text!)!)/100
+            
+            countBMI(userWeight: weight, userHeight: height)
+            getResume(myBMI: myBMI)
+            
+            DestViewController.BodyMassText = "Your BodyMassIndex is " + String(format: "%.1f", myBMI) + resume
         }
     }
     
